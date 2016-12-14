@@ -2,45 +2,50 @@
 
 //Square File =====================================
 
-function Square(sideOne, sideTwo, sideThree, sideFour) {
+function Shape_Square(sideOne, sideTwo, sideThree, sideFour) {
     this.sideOne =sideOne;
     this.sideTwo = sideTwo;
     this.sideThree = sideThree;
     this.sideFour = sideFour;
 }
 
-Square.prototype.printInfo = function(){
+Shape_Square.prototype.get_type = function(){
+
+    
 	console.log("Square dimensions are:" + this.sideOne + "," +  this.sideTwo + ","
 		+ this.sideThree + "," + this.sideFour
 		);
+
+
+
 };
 
-var shape = new Square(20, 30, 20, 30);
+var shape = new Shape_Square(20, 30, 20, 30);
 
-shape.printInfo();
+shape.get_type();
 
 //Triangle file=================================================
 
 
-function Triangle(sideOne, sideTwo, sideThree) {
+function Shape_Triangle(sideOne, sideTwo, sideThree) {
     this.sideOne =sideOne;
     this.sideTwo = sideTwo;
     this.sideThree = sideThree;
    
 }
 
-Triangle.prototype.printInfo = function(){
+Shape_Triangle.prototype.get_type = function(){
 	console.log("Triangle dimensions are:" + this.sideOne + "," +  this.sideTwo + "," + this.sideThree);
 };
 
-var shape = new Triangle(20, 30,40);
+var shape = new Shape_Triangle(20, 30,40);
 
-shape.printInfo();
+shape.get_type();
 
 
 // pemtgone shape =======================================
 
-function Pentagon(sideOne, sideTwo, sideThree, sideFour, sideFIve) {
+function Shape_Pentagon(sideOne, sideTwo, sideThree, sideFour, sideFIve) {
     this.sideOne =sideOne;
     this.sideTwo = sideTwo;
     this.sideThree = sideThree;
@@ -48,21 +53,21 @@ function Pentagon(sideOne, sideTwo, sideThree, sideFour, sideFIve) {
     this.sideFIve = sideFIve;
 }
 
-Pentagon.prototype.newShape = function(){
+Shape_Pentagon.prototype.get_type = function(){
 	console.log("Pentagon dimensions are:" + this.sideOne + "," +  this.sideTwo + ","
 		+ this.sideThree + "," + this.sideFour + "," + this.sideFIve
 		);
 };
 
-var shape = new Pentagon(20, 30, 20, 30, 20);
+var shape = new Shape_Pentagon(20, 30, 20, 30, 20);
 
-shape.newShape();
+shape.get_type();
 
 console.log( "Instance of contractors" + "\n" +
-    (Pentagon instanceof Object) + "\n" + 
-    (Pentagon instanceof Object) + "\n" +
-    (Square instanceof Object) + "\n" +
-    (Square instanceof Number));
+    (Shape_Pentagon instanceof Object) + "\n" + 
+    (Shape_Triangle instanceof Object) + "\n" +
+    (Shape_Square instanceof Object) + "\n" +
+    (Shape_Square instanceof Number));
 
 
 
